@@ -6,6 +6,6 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+var page = React.createElement("h1", {}, "lesson 2 for first app");
 
-
-root.render();
+root.render(page);
