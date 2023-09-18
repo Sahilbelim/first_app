@@ -5,17 +5,13 @@ import "./index.css";
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 var page = (
   <div>
     <div className="container mt-5">
       <div className="row">
         <div className="col-10 offset-1">
           <div
-            className="card mt-5 shadow "
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom"
-          >
+            className="card mt-5 shadow ">
             <div className="text-bg-danger card-header ">
               <h2 className="">Use Bootstrap in React</h2>
             </div>
@@ -85,7 +81,6 @@ var page = (
         </div>
       </div>
     </div>
-  </div>
-);
+  </div>);
 
 root.render(page);

@@ -32,3 +32,35 @@ ul
 {
   list-style: none;
 } */
+.c_h
+{
+  margin-top: -400px;
+  font-size: 80px;
+}
+.nav-link:hover{
+  color: #48B674;
+}
+.gl
+{
+ background-color:  #EDF8F4;
+}
+.main
+{
+  height: 765px;
+}
+.hover-success:hover
+{
+  background-color: #48B674;
+  color: #EDF8F4;
+}
+
+.my-icon
+{
+ margin-left: 30%;
+ margin-top: 5%;
+ 
+}
+/* var dark:#35155D; */
+/* var eemidark:#512B81; */
+/* var semilight:#4477CE; */
+/* var ilight:#8CABFF; */
