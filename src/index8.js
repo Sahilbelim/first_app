@@ -6,5 +6,14 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// root.render(Card());
-root.render();
+function getpage() {
+  console.log("Hello ");
+  return `Name : ${student.name}  Age : ${student.age} \n Weight : ${student.weight}  `;
+}
+let student = {
+  name: "sahil Belim",
+  age: 18,
+  weight: 45.36,
+};
+
+root.render(getpage(student));
