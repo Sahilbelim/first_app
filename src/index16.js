@@ -6,6 +6,10 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+class Output extends React.Component {
+  render() {
+    return <div>hello world</div>;
+  }
+}
 
-
-root.render();
+root.render(<Output />);
