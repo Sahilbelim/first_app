@@ -7,92 +7,115 @@ import Student from "./student";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-class StudentData extends React.Component {
-  constructor(props)
-  {
+class MyForm extends React.Component {
+  constructor(props) {
     super(props);
-    this.state =
-    {
-      students:Data
-    }
+    this.state = {};
   }
 
-  render()
-  {
-    console.log(this.state.students[0])
+  render() {
     return (
       <>
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <h1 align="center">All Student Data </h1>
+            <div className="col-8 offset-2">
+              <div className="card">
+                <div className="card-body">
+                  <form>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="Enter Name"
+                        name="name"
+                      />
+                      <label for="floatingInput">Enter Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="Enter Email"
+                        name="email"
+                      />
+                      <label for="floatingInput">Enter Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password"
+                        name="password"
+                      />
+                      <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Conform Password"
+                        name="c_password"
+                      />
+                      <label for="floatingPassword">Conform Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Enter Moblie number"
+                        min={1000000000}
+                        max={9999999999}
+                        name="mNumber"
+                      />
+                      <label for="floatingPassword">Enter Moblie number</label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="formRadioDefault"
+                      />
+                      <label class="form-check-label" for="formRadioDefault">
+                        Male
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="gender"
+                        id="formRadioChecked"
+                      />
+                      <label class="form-check-label" for="formRadioChecked">
+                        Female
+                      </label>
+                      <div className="d-flex justify-content-end">
+                        <input
+                          type="submit"
+                          value="Submit"
+                          className="btn btn-primary m-2"
+                        />
+                        <input
+                          type="reset"
+                          value="clear all"
+                          className="btn btn-danger m-2"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="row">
-            {/* <Student data={this.state.students[0]} />
-            <Student data={this.state.students[1]} />
-            <Student data={this.state.students[2]} />
-            <Student data={this.state.students[3]} /> */}
-
-            {
-              
-              this.state.students.map((student) => {
-                return (<Student data={student}/>)
-              })
-            
-            
-            }
           </div>
         </div>
       </>
     );
   }
 }
-
-var Data = [
-  {
-    id: 1,
-    name: "Sahil belim",
-    age: 18,
-    number: 8574962512,
-    email: "sahil@gmail.com",
-  },
-  {
-    id: 2,
-    name: "Viraj",
-    age: 18,
-    number: 8574362410,
-    email: "viraj@gmail.com",
-  },
-  {
-    id: 3,
-    name: "param patel",
-    age: 19,
-    number: 8574631210,
-    email: "param@gmail.com",
-  },
-  {
-    id: 4,
-    name: "pratham patel",
-    age: 20,
-    number: 8574631210,
-    email: "pratham@gmail.com",
-  },
-
-  {
-    id: 5,
-    name: "kukadiya Vasu",
-    age: 19,
-    number: 8574631210,
-    email: "user@gmail.com",
-  },
-  {
-    id: 6,
-    name: "darshan kanani",
-    age: 18,
-    number: 8574631210,
-    email: "user1@gmail.com",
-  },
-];
-
-root.render(<StudentData/>);
+root.render(<MyForm />);
