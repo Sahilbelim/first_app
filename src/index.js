@@ -12,7 +12,21 @@ class MyForm extends React.Component {
     super(props);
     this.state = {};
   }
-
+  onInputChange = (e) =>
+  {
+    // console.log(e.target.name)
+    // console.log(e.target.value)
+    this.setState({
+      // name:"sahil"
+      [e.target.name]:e.target.value
+    })
+  }
+  onSubmitForm = (event) => {
+    event.preventDefault();
+    console.log("Submit call")
+    console.log(this.state)
+    
+  }
   render() {
     return (
       <>
@@ -21,78 +35,100 @@ class MyForm extends React.Component {
             <div className="col-8 offset-2">
               <div className="card">
                 <div className="card-body">
-                  <form>
-                    <div class="form-floating mb-3">
+                  <form onSubmit={this.onSubmitForm}>
+                    <div className="form-floating mb-3">
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="floatingInput"
                         placeholder="Enter Name"
                         name="name"
+                        onChange={this.onInputChange}
+                        value={this.state.name}
                       />
-                      <label for="floatingInput">Enter Name</label>
+                      <label htmlFor="floatingInput">Enter Name</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="email"
-                        class="form-control"
+                        className="form-control"
                         id="floatingInput"
                         placeholder="Enter Email"
                         name="email"
+                        onChange={this.onInputChange}
+                        value={this.state.email}
                       />
-                      <label for="floatingInput">Enter Email</label>
+                      <label htmlFor="floatingInput">Enter Email</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="password"
-                        class="form-control"
+                        className="form-control"
                         id="floatingPassword"
                         placeholder="Password"
                         name="password"
+                        onChange={this.onInputChange}
+                        value={this.state.password}
                       />
-                      <label for="floatingPassword">Password</label>
+                      <label htmlFor="floatingPassword">Password</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="password"
-                        class="form-control"
+                        className="form-control"
                         id="floatingPassword"
                         placeholder="Conform Password"
                         name="c_password"
+                        onChange={this.onInputChange}
+                        value={this.state.c_password}
                       />
-                      <label for="floatingPassword">Conform Password</label>
+                      <label htmlFor="floatingPassword">Conform Password</label>
                     </div>
-                    <div class="form-floating mb-3">
+                    <div className="form-floating mb-3">
                       <input
                         type="number"
-                        class="form-control"
+                        className="form-control"
                         id="floatingPassword"
                         placeholder="Enter Moblie number"
                         min={1000000000}
                         max={9999999999}
                         name="mNumber"
+                        onChange={this.onInputChange}
+                        value={this.state.mNumber}
                       />
-                      <label for="floatingPassword">Enter Moblie number</label>
+                      <label htmlFor="floatingPassword">
+                        Enter Moblie number
+                      </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="gender"
                         id="formRadioDefault"
+                        onChange={this.onInputChange}
+                        value="male"
                       />
-                      <label class="form-check-label" for="formRadioDefault">
+                      <label
+                        className="form-check-label"
+                        htmlFor="formRadioDefault"
+                      >
                         Male
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="gender"
                         id="formRadioChecked"
+                        onChange={this.onInputChange}
+                        value="female"
                       />
-                      <label class="form-check-label" for="formRadioChecked">
+                      <label
+                        className="form-check-label"
+                        htmlFor="formRadioChecked"
+                      >
                         Female
                       </label>
                       <div className="d-flex justify-content-end">
