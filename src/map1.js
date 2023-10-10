@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+//  const [data,setdata]=useState[[]]
 
 function List(props) {
 
   var con = props.eliment;
+  // function mydata()
+  // {
+
+  // }
   var Data = con.map((name) => {
     // console.log(name)
     return(<li>{name}</li>)
