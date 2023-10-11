@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Lesson2 from "./Api/lesson2";
+import Lesson3 from "./Api/lesson3";
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 
-root.render(<Lesson2/>);
+root.render(<Lesson3/>);
