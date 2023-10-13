@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Users from './Users';
-
 export default class Lesson1 extends Component {
     constructor(props)
     {
